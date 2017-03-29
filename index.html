@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <head><title>Translator App</title>
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+      <Link  rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+      <script src ="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src = "app.js"></script>
+  </head>
+  <body ng-app="translator" ng-controller = "trnsController as trns">
+    <div class = "container">
+      <form name="transInput" ng-submit=trns.sendToAPI(input)>
+        <label>Input</label>
+        <input type="text" placeholder="Please enter text to translate"
+        ng-model= "input" class="form-control" translateInput>
+        <br>
+        <button class = "btn btn-primary" type="submit">translator</button>
+      </form>
+      <br><br>
+      <strong>TRANSLATION: </strong>
+      <span>
+      {{output}}</span>
+    </div>
+  </body>
+</html>
